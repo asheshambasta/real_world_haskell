@@ -89,3 +89,7 @@ wordsFold (c:cs) = foldl checkWhitespace [[c]] cs
                                 where
                                     otherWords = init wrds
                                     curWord = last wrds
+
+-- problem 6: unlines using fold
+unlinesFold :: [String] -> String
+unlinesFold (fLine:rest)  = foldl (\acc line -> acc ++ "\n" ++ line) fLine rest
