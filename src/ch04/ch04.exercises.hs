@@ -74,3 +74,8 @@ groupByFold pred (x : xs) = foldl step [[x]] xs
                                         where
                                         lastGroup = last acc
                                         previousGroups = init acc
+
+-- problem 6: any using fold
+anyFold :: (a -> Bool) -> [a] -> Bool
+anyFold pred xs =   foldl step False xs
+                    where step acc x = acc || (pred x)
