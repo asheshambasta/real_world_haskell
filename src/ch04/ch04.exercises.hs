@@ -62,3 +62,16 @@ takeWhileFoldr pred xs = snd (foldr step (True, []) (reverse xs))
                     where step x (flag, acc)
                                             | flag && pred x = (True, acc ++ [x])
                                             | otherwise = (False, acc)
+
+-- problem 5: groupBy using fold
+groupByFold :: (a -> a -> Bool) -> [a] -> [[a]]
+groupByFold pred xs =   foldl step [] xs
+                        where
+                        step acc x
+                            | null acc = [[x]]
+                            | otherwise = if (all (\gx -> pred x gx) lastGroup)
+                                then previousGroups ++ [lastGroup ++ [x]]
+                                else acc ++ [[x]]
+                                    where
+                                    lastGroup = last acc
+                                    previousGroups = init acc
