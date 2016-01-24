@@ -8,4 +8,6 @@ But then again, this isn't a recruitment pitch.
 
 If you find a bug in my code, fire up an issue and I'll try my best to solve it.
 
+[centralapp]: https://www.getcentralapp.com
+[real world haskell]: http://book.realworldhaskell.org/read/
 
