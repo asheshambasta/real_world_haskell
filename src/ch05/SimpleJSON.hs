@@ -27,7 +27,7 @@ getBool :: JValue -> Maybe Bool
 getBool (JBool b)   = Just b
 getBool _           = Nothing
 
-getObject :: JValue -> Maybe JObject
+getObject :: JValue -> Maybe [(String, JValue)]
 getObject (JObject j)   = Just j
 getObject _             = Nothing
 
