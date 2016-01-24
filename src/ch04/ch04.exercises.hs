@@ -45,3 +45,13 @@ asIntFold str
 concatFoldr :: [[a]] -> [a]
 concatFoldr xs =    foldr step [] xs
                     where step x acc = x ++ acc
+
+-- problem 4: takeWhile using explicit recursion
+taker :: (a -> Bool) -> [a] -> [a] -> [a]
+taker _ acc [] = acc
+taker pred acc (x:xs)
+    | pred x = taker pred (acc ++ [x]) xs
+    | otherwise = acc
+
+takeWhileExpl :: (a -> Bool) -> [a] -> [a]
+takeWhileExpl pred xs = taker pred [] xs
