@@ -79,3 +79,4 @@ groupByFold pred (x : xs) = foldl step [[x]] xs
 anyFold :: (a -> Bool) -> [a] -> Bool
 anyFold pred xs =   foldl step False xs
                     where step acc x = acc || (pred x)
+
