@@ -1,5 +1,8 @@
 -- file: ch04/ch04.exercises.hs
 
+import Data.Char (digitToInt)
+
+
 safeHead :: [a] -> Maybe a
 safeHead [] = Nothing
 safeHead (h:_) = Just h
@@ -27,3 +30,7 @@ splitWith' pred acc (x:xs)
         then [x] : (splitWith' pred [] xs)
         else acc : [x] : (splitWith' pred [] xs)
     | otherwise = splitWith' pred (acc ++ [x]) xs
+
+asIntFold :: String -> Int
+asIntFold str = fst t
+    where t = foldr (\x acc -> ((fst acc) + (digitToInt x) * (snd acc), (snd acc) * 10)) (0, 1) str
