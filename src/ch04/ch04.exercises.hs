@@ -31,8 +31,13 @@ splitWith' pred acc (x:xs)
         else acc : [x] : (splitWith' pred [] xs)
     | otherwise = splitWith' pred (acc ++ [x]) xs
 
-asIntFold :: String -> Int
-asIntFold ('-':xs) = -1 * (asIntFold xs)
-asIntFold str = fst t
-    where t = foldr (\x acc -> ((fst acc) + (digitToInt x) * (snd acc), (snd acc) * 10)) (0, 1) str
+type ErrorMessage = String
+asIntFold :: String -> Either ErrorMessage Int
+asIntFold ('-':xs) =    case (asIntFold xs) of
+                        Right v -> Right (-v)
+                        Left err -> Left err
+asIntFold str
+    | all (\x -> elem x ('-':['0'..'9'])) str = Right (fst t)
+    | otherwise = Left "wrong digit(s)"
+        where t = foldr (\x acc -> ((fst acc) + (digitToInt x) * (snd acc), (snd acc) * 10)) (0, 1) str
 
