@@ -55,3 +55,10 @@ taker pred acc (x:xs)
 
 takeWhileExpl :: (a -> Bool) -> [a] -> [a]
 takeWhileExpl pred xs = taker pred [] xs
+
+-- problem 4: takeWhile using foldr
+takeWhileFoldr :: (a -> Bool) -> [a] -> [a]
+takeWhileFoldr pred xs = snd (foldr step (True, []) (reverse xs))
+                    where step x (flag, acc)
+                                            | flag && pred x = (True, acc ++ [x])
+                                            | otherwise = (False, acc)
