@@ -41,3 +41,7 @@ asIntFold str
     | otherwise = Left "wrong digit(s)"
         where t = foldr (\x acc -> ((fst acc) + (digitToInt x) * (snd acc), (snd acc) * 10)) (0, 1) str
 
+-- concat as foldr
+concatFoldr :: [[a]] -> [a]
+concatFoldr xs =    foldr step [] xs
+                    where step x acc = x ++ acc
