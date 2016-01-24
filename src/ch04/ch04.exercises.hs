@@ -80,3 +80,12 @@ anyFold :: (a -> Bool) -> [a] -> Bool
 anyFold pred xs =   foldl step False xs
                     where step acc x = acc || (pred x)
 
+-- problem 6: words using fold
+wordsFold :: String -> [String]
+wordsFold [] = []
+wordsFold (c:cs) = foldl checkWhitespace [[c]] cs
+                    where   checkWhitespace wrds ' ' = wrds ++ [[]]
+                            checkWhitespace wrds nSpChar = otherWords ++ [curWord ++ [nSpChar]]
+                                where
+                                    otherWords = init wrds
+                                    curWord = last wrds
