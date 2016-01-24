@@ -32,5 +32,7 @@ splitWith' pred acc (x:xs)
     | otherwise = splitWith' pred (acc ++ [x]) xs
 
 asIntFold :: String -> Int
+asIntFold ('-':xs) = -1 * (asIntFold xs)
 asIntFold str = fst t
     where t = foldr (\x acc -> ((fst acc) + (digitToInt x) * (snd acc), (snd acc) * 10)) (0, 1) str
+
