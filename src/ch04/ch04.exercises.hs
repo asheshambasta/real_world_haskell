@@ -92,4 +92,5 @@ wordsFold (c:cs) = foldl checkWhitespace [[c]] cs
 
 -- problem 6: unlines using fold
 unlinesFold :: [String] -> String
+unlinesFold [] = []
 unlinesFold (fLine:rest)  = foldl (\acc line -> acc ++ "\n" ++ line) fLine rest
