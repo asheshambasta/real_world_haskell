@@ -78,7 +78,9 @@ groupByFold pred (x : xs) = foldl step [[x]] xs
 -- problem 6: any using fold
 anyFold :: (a -> Bool) -> [a] -> Bool
 anyFold pred xs =   foldl step False xs
-                    where step acc x = acc || (pred x)
+                    where
+                        step True _ = True
+                        step False x = pred x
 
 -- problem 6: cycle using fold
 cycleFold :: [a] -> [a]
