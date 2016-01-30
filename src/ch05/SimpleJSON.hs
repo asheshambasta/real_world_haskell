@@ -1,6 +1,16 @@
 
 -- file: ch05/SimpleJSON.hs
 
+module SimpleJson (
+    JValue(..),
+    getString,
+    getInt,
+    getDouble,
+    getBool,
+    getArray,
+    isNull
+) where
+
 data JValue =   JString         String
                 | JNumber       Double
                 | JBool         Bool
@@ -38,3 +48,4 @@ getArray _              = Nothing
 isNull :: JValue -> Bool
 isNull JNull    = True
 isNull _        = False
+
