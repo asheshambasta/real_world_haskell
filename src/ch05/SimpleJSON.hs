@@ -1,7 +1,7 @@
 
 -- file: ch05/SimpleJSON.hs
 
-module SimpleJson (
+module SimpleJSON (
     JValue(..),
     getString,
     getInt,
