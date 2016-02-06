@@ -20,6 +20,17 @@ Failed, modules loaded: none.-}
     read "Blue"     = Blue
     read "White"    = White-}
 
+-- I've named my variables differently here.
+-- I don't agree with conciseness at the cost of readability
+-- names like xs, value, etc. mean nothing. They don't adhere to the context of the problem
+-- and are against the philosophy of writing readable code.
+instance Read Colour where
+    readsPrec _ parsedStr   =
+        tryParse [("Red", Red), ("Green", Green), ("Blue", Blue), ("White", White)]
+        where tryParse ((strName, res):pairs) = if (take (length strName) parsedStr) == strName
+                then [(res, drop (length strName) parsedStr)]
+                else tryParse pairs
+
 class BasicEq a where
     isEqual :: a -> a -> Bool
 
