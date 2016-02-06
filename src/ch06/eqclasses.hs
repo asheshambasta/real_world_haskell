@@ -9,7 +9,16 @@ instance Show Colour where
     show Red    = "Red"
     show Green  = "Green"
     show Blue   = "Blue"
-    show White = "White"
+    show White  = "White"
+
+-- the code below doesn't compile.
+{-eqclasses.hs:15:5: ‘read’ is not a (visible) method of class ‘Read’
+Failed, modules loaded: none.-}
+{-instance Read Colour where
+    read "Red"      = Red
+    read "Green"    = Green
+    read "Blue"     = Blue
+    read "White"    = White-}
 
 class BasicEq a where
     isEqual :: a -> a -> Bool
