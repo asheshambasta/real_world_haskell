@@ -27,9 +27,10 @@ Failed, modules loaded: none.-}
 instance Read Colour where
     readsPrec _ parsedStr   =
         tryParse [("Red", Red), ("Green", Green), ("Blue", Blue), ("White", White)]
-        where tryParse ((strName, res):pairs) = if (take (length strName) parsedStr) == strName
-                then [(res, drop (length strName) parsedStr)]
-                else tryParse pairs
+        where   tryParse ((colourName, colour):pairs) = if (take (length colourName) (clean parsedStr)) == colourName
+                    then [(colour, drop (length colourName) (clean parsedStr))]
+                    else tryParse pairs
+                clean str = dropWhile ( == ' ') str
 
 class BasicEq a where
     isEqual :: a -> a -> Bool
