@@ -1,5 +1,11 @@
 -- file: ch06/eqclasses.hs
 
+data Colour =   Red
+                | Green
+                | Blue
+                | White
+                deriving (Show)
+
 class BasicEq a where
     isEqual :: a -> a -> Bool
 
@@ -18,11 +24,6 @@ class BasicEq3 a where
 
     isNotEqual3 :: a -> a -> Bool
     isNotEqual3 x y = not (isEqual3 x y)
-
-data Colour =   Red
-                | Green
-                | Blue
-                | White
 
 instance BasicEq3 Colour where
     isEqual3 Red    Red     = True
