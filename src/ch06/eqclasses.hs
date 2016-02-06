@@ -4,7 +4,12 @@ data Colour =   Red
                 | Green
                 | Blue
                 | White
-                deriving (Show)
+
+instance Show Colour where
+    show Red    = "Red"
+    show Green  = "Green"
+    show Blue   = "Blue"
+    show White = "White"
 
 class BasicEq a where
     isEqual :: a -> a -> Bool
