@@ -17,3 +17,19 @@ instance JSON String where
     toJValue = JString
     fromJValue (JString str)    = Right str
     fromJValue _                = Left "not a string"
+
+doubleToJValue :: (Double -> a) -> JValue -> Either JSONError a
+doubleToJValue f (JNumber v)    = Right (f v)
+doubleToJValue _ _              = Left "not a json number"
+
+instance JSON Int where
+    toJValue    =   JNumber . realToFrac
+    fromJValue  =   doubleToJValue round
+
+instance JSON Integer where
+    toJValue    =   JNumber . realToFrac
+    fromJValue  =   doubleToJValue round
+
+instance JSON Double where
+    toJValue    =   JNumber
+    fromJValue  =   doubleToJValue id
