@@ -19,6 +19,7 @@ instance JSON String where
     fromJValue (JString str)    = Right str
     fromJValue _                = Left "not a string"
 
+
 doubleToJValue :: (Double -> a) -> JValue -> Either JSONError a
 doubleToJValue f (JNumber v)    = Right (f v)
 doubleToJValue _ _              = Left "not a json number"
