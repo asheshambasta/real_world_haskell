@@ -1,5 +1,6 @@
 -- file: ch06/JSONClass.hs
 {-# LANGUAGE TypeSynonymInstances #-}
+{-# LANGUAGE FlexibleInstances #-}
 
 import Control.Arrow (second)
 
@@ -14,7 +15,7 @@ instance JSON JValue where
     fromJValue = Right -- cryptic way of saying fromJValue x = Right x
 
 instance JSON String where
-    toJValue = JString
+    toJValue                    = JString
     fromJValue (JString str)    = Right str
     fromJValue _                = Left "not a string"
 
@@ -46,9 +47,9 @@ data JValue =   JString String
                 | JNumber Double
                 | JBool Bool
                 | JNull
-                | JObject (JObj, JValue)
-                | JArray (JAry, JValue)
-                deriving (Eq, Ord, Show)
+                | JObject (JObj JValue)
+                | JArray (JAry JValue)
+--                 deriving ()
 
 whenRight :: (b -> c) -> Either a b -> Either a c
 whenRight _ (Left err)  = Left err
