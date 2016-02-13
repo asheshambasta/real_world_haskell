@@ -65,7 +65,7 @@ mapEithers _ []     = Right []
 jAryFromJValue :: (JSON a) => JValue -> Either JSONError (JAry a)
 jAryFromJValue (JArray (JAry a)) =
     whenRight JAry (mapEithers fromJValue a)
-JAryFromJValue _ = Left "not a json array"
+jAryFromJValue _ = Left "not a json array"
 
 jAryToJValue :: (JSON a) => [a] -> [JValue]
 jAryToJValue = JArray . JAry . map toJValue . fromJAry
@@ -86,7 +86,7 @@ jAryOfJValuesToJValue   = JArray
 instance (JSON a) => JSON (JObj a) where
     toJValue = JObject . JObj . map (second toJValue) . fromJObj
 
-    fromJValue (JObject (JObj o)) = whenRight JObj (mapEithers uwrap o)
+    fromJValue (JObject (JObj o)) = whenRight JObj (mapEithers unwrap o)
         where unwrap (k, v) = whenRight ((,), k) (fromJValue v)
     fromJValue _ = Left "not a json object"
 -- owing to the exasperatingly confusing nature of the book in dealing with the JSON stuff,
