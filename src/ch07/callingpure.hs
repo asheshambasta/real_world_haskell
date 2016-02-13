@@ -7,3 +7,4 @@ main = do
     name <- getLine
     let greeting = greetingFunc name
     putStrLn greeting
+
