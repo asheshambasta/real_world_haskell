@@ -1,0 +1,118 @@
+../
+├── _REALWORLDHASKELL
+│   ├── CH01
+│   │   ├── WC.HS
+│   │   └── QUUX.TXT
+│   ├── CH02
+│   │   ├── ROUNDTOEVEN.HS
+│   │   ├── LASTBUTONE.HS
+│   │   ├── MYDROP.HS
+│   │   └── SHORTCIRTCUIT.HS
+│   └── CH03
+│       ├── BOOKSTORE.HS
+│       ├── BOOL.HS
+│       ├── EXERCISES.HS
+│       ├── GUARD.HS
+│       ├── LENDING.HS
+│       ├── LISTADT.HS
+│       ├── LOCALFUNCTION.HS
+│       ├── MAYBETREE.HS
+│       ├── MYSECOND.HS
+│       ├── NULLABLE.HS
+│       ├── ROYGBIV.HS
+│       ├── SHAPEUNION.HS
+│       ├── TREE.HS
+│       └── ADD.HS
+├── BABY.HS
+├── REALWORLDHASKELL
+│   ├── README.MD
+│   ├── DIST
+│   │   ├── BUILD
+│   │   │   └── AUTOGEN
+│   │   │       ├── PATHS_REALWORLDHASKELL.HS
+│   │   │       └── CABAL_MACROS.H
+│   │   ├── SETUP-CONFIG
+│   │   ├── SETUP-CONFIG.GHC-MOD.CABAL-COMPONENTS
+│   │   ├── SETUP-CONFIG.GHC-MOD.PACKAGE-DB-STACK
+│   │   ├── SETUP-CONFIG.GHC-MOD.PACKAGE-OPTIONS
+│   │   └── SETUP-CONFIG.GHC-MOD.RESOLVED-COMPONENTS
+│   ├── INPUT.TXT
+│   ├── REALWORLDHASKELL.CABAL
+│   ├── REALWORLDHASKELL.IML
+│   └── SRC
+│       ├── MAIN.HS
+│       ├── CH01
+│       │   ├── WC.HS
+│       │   └── QUUX.TXT
+│       ├── CH02
+│       │   ├── ROUNDTOEVEN.HS
+│       │   ├── LASTBUTONE.HS
+│       │   ├── MYDROP.HS
+│       │   └── SHORTCIRTCUIT.HS
+│       ├── CH03
+│       │   ├── BOOKSTORE.HS
+│       │   ├── BOOL.HS
+│       │   ├── EXERCISES.HS
+│       │   ├── GUARD.HS
+│       │   ├── LENDING.HS
+│       │   ├── LISTADT.HS
+│       │   ├── LOCALFUNCTION.HS
+│       │   ├── MAYBETREE.HS
+│       │   ├── MYSECOND.HS
+│       │   ├── NULLABLE.HS
+│       │   ├── ROYGBIV.HS
+│       │   ├── SHAPEUNION.HS
+│       │   ├── TREE.HS
+│       │   └── ADD.HS
+│       ├── CH04
+│       │   ├── FIRSTWORDS.HS
+│       │   ├── FIXLINES.HS
+│       │   ├── FOLD.HS
+│       │   ├── INTERACTWITH.HS
+│       │   ├── PLUS.HS
+│       │   ├── SPLITLINES.HS
+│       │   ├── STRINGTRANSPOSE.HS
+│       │   └── CH04.EXERCISES.HS
+│       ├── CH05
+│       │   ├── MAIN.HI
+│       │   ├── MAIN.HS
+│       │   ├── MAIN.O
+│       │   ├── PRETTIFY.HS
+│       │   ├── PRETTYJSON.HS
+│       │   ├── PUTJSON.HS
+│       │   ├── SIMPLEJSON.HI
+│       │   ├── SIMPLEJSON.HS
+│       │   ├── SIMPLEJSON.O
+│       │   └── SIMPLE
+│       ├── CH06
+│       │   ├── BROKENCLASS.HS
+│       │   ├── JSONCLASS.HS
+│       │   ├── JSONCLASSEXPORT.HS
+│       │   ├── NEWTYPE.HS
+│       │   ├── SIMPLEJSON.O
+│       │   ├── CH06.EXERCISES.HS
+│       │   ├── COLOURDERIVED.HS
+│       │   ├── EQCLASSES.HS
+│       │   └── READ.HS
+│       └── CH07
+│           ├── BASICIO.HS
+│           ├── CALLINGPURE.HS
+│           └── TOUPPER-IMP.HS
+└── TEST
+    ├── DIST
+    │   ├── BUILD
+    │   │   └── AUTOGEN
+    │   │       ├── PATHS_TEST.HS
+    │   │       └── CABAL_MACROS.H
+    │   ├── SETUP-CONFIG
+    │   ├── SETUP-CONFIG.GHC-MOD.CABAL-COMPONENTS
+    │   ├── SETUP-CONFIG.GHC-MOD.PACKAGE-DB-STACK
+    │   ├── SETUP-CONFIG.GHC-MOD.PACKAGE-OPTIONS
+    │   └── SETUP-CONFIG.GHC-MOD.RESOLVED-COMPONENTS
+    ├── SRC
+    │   ├── MAIN.HS
+    │   └── BABY.HS
+    ├── TEST.CABAL
+    └── TEST.IML
+
+21 DIRECTORIES, 94 FILES

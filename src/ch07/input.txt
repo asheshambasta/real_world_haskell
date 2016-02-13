@@ -1,0 +1,118 @@
+../
+├── _realworldhaskell
+│   ├── ch01
+│   │   ├── WC.hs
+│   │   └── quux.txt
+│   ├── ch02
+│   │   ├── RoundToEven.hs
+│   │   ├── lastButOne.hs
+│   │   ├── myDrop.hs
+│   │   └── shortCirtcuit.hs
+│   └── ch03
+│       ├── BookStore.hs
+│       ├── Bool.hs
+│       ├── Exercises.hs
+│       ├── Guard.hs
+│       ├── Lending.hs
+│       ├── ListADT.hs
+│       ├── LocalFunction.hs
+│       ├── MaybeTree.hs
+│       ├── MySecond.hs
+│       ├── Nullable.hs
+│       ├── Roygbiv.hs
+│       ├── ShapeUnion.hs
+│       ├── Tree.hs
+│       └── add.hs
+├── baby.hs
+├── realworldhaskell
+│   ├── README.md
+│   ├── dist
+│   │   ├── build
+│   │   │   └── autogen
+│   │   │       ├── Paths_realworldhaskell.hs
+│   │   │       └── cabal_macros.h
+│   │   ├── setup-config
+│   │   ├── setup-config.ghc-mod.cabal-components
+│   │   ├── setup-config.ghc-mod.package-db-stack
+│   │   ├── setup-config.ghc-mod.package-options
+│   │   └── setup-config.ghc-mod.resolved-components
+│   ├── input.txt
+│   ├── realworldhaskell.cabal
+│   ├── realworldhaskell.iml
+│   └── src
+│       ├── Main.hs
+│       ├── ch01
+│       │   ├── WC.hs
+│       │   └── quux.txt
+│       ├── ch02
+│       │   ├── RoundToEven.hs
+│       │   ├── lastButOne.hs
+│       │   ├── myDrop.hs
+│       │   └── shortCirtcuit.hs
+│       ├── ch03
+│       │   ├── BookStore.hs
+│       │   ├── Bool.hs
+│       │   ├── Exercises.hs
+│       │   ├── Guard.hs
+│       │   ├── Lending.hs
+│       │   ├── ListADT.hs
+│       │   ├── LocalFunction.hs
+│       │   ├── MaybeTree.hs
+│       │   ├── MySecond.hs
+│       │   ├── Nullable.hs
+│       │   ├── Roygbiv.hs
+│       │   ├── ShapeUnion.hs
+│       │   ├── Tree.hs
+│       │   └── add.hs
+│       ├── ch04
+│       │   ├── FirstWords.hs
+│       │   ├── FixLines.hs
+│       │   ├── Fold.hs
+│       │   ├── InteractWith.hs
+│       │   ├── Plus.hs
+│       │   ├── SplitLines.hs
+│       │   ├── StringTranspose.hs
+│       │   └── ch04.exercises.hs
+│       ├── ch05
+│       │   ├── Main.hi
+│       │   ├── Main.hs
+│       │   ├── Main.o
+│       │   ├── Prettify.hs
+│       │   ├── PrettyJSON.hs
+│       │   ├── PutJSON.hs
+│       │   ├── SimpleJSON.hi
+│       │   ├── SimpleJSON.hs
+│       │   ├── SimpleJSON.o
+│       │   └── simple
+│       ├── ch06
+│       │   ├── BrokenClass.hs
+│       │   ├── JSONClass.hs
+│       │   ├── JSONClassExport.hs
+│       │   ├── Newtype.hs
+│       │   ├── SimpleJSON.o
+│       │   ├── ch06.exercises.hs
+│       │   ├── colourderived.hs
+│       │   ├── eqclasses.hs
+│       │   └── read.hs
+│       └── ch07
+│           ├── basicio.hs
+│           ├── callingpure.hs
+│           └── toupper-imp.hs
+└── test
+    ├── dist
+    │   ├── build
+    │   │   └── autogen
+    │   │       ├── Paths_test.hs
+    │   │       └── cabal_macros.h
+    │   ├── setup-config
+    │   ├── setup-config.ghc-mod.cabal-components
+    │   ├── setup-config.ghc-mod.package-db-stack
+    │   ├── setup-config.ghc-mod.package-options
+    │   └── setup-config.ghc-mod.resolved-components
+    ├── src
+    │   ├── Main.hs
+    │   └── baby.hs
+    ├── test.cabal
+    └── test.iml
+
+21 directories, 94 files
