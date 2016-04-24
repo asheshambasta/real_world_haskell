@@ -1,0 +1,3 @@
+Haskell is cool.
+Functional programming is even cooler.
+Go go go!
