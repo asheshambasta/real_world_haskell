@@ -41,3 +41,17 @@ data Tree a = Node a (Tree a) (Tree a)
 
 treeDepth Empty     = 0
 treeDepth (Node _ t1 t2)  = 1 + (max (treeDepth t1) (treeDepth t2))
+
+data Point = Point {
+    x :: Double,
+    y :: Double
+} deriving (Show)
+
+data LineSlope = Slope Double
+                | Inf
+                deriving (Show)
+
+pointSlope :: Point -> Point -> LineSlope
+pointSlope (Point x1 y1) (Point x2 y2)
+    | x1 == x2  = Inf
+    | otherwise = Slope ((y2 - y1)/(x2 - x1))
