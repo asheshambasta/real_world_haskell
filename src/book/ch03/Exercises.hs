@@ -35,3 +35,9 @@ isListPalin xs = check1By1 xs (rev2 xs)
 intersperse sep []      = []
 intersperse sep (x:[])  = x
 intersperse sep (x:xs)  = x ++ [sep] ++ (intersperse sep xs)
+
+data Tree a = Node a (Tree a) (Tree a)
+            | Empty
+
+treeDepth Empty     = 0
+treeDepth (Node _ t1 t2)  = 1 + (max (treeDepth t1) (treeDepth t2))
