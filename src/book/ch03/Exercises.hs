@@ -49,9 +49,33 @@ data Point = Point {
 
 data LineSlope = Slope Double
                 | Inf
+                | NegInf
+                deriving (Show)
+
+lineAngle (Slope d)     = atan d
+lineAngle Inf           = pi/2
+lineAngle NegInf        = -pi/2
+
+data Direction  = TurnRight Double
+                | TurnLeft Double
+                | NoChange
                 deriving (Show)
 
 pointSlope :: Point -> Point -> LineSlope
 pointSlope (Point x1 y1) (Point x2 y2)
-    | x1 == x2  = Inf
-    | otherwise = Slope ((y2 - y1)/(x2 - x1))
+    | x1 == x2 && y2 > y1   = Inf
+    | x1 == x2 && y2 < y1   = NegInf
+    | x1 == x2 && y2 == y1  = Slope 0
+    | otherwise             = Slope ((y2 - y1)/(x2 - x1))
+
+directionChange p1 p2 p3  =
+    case angBetween of
+        ab | ab < 0 -> TurnLeft ab
+        ab | ab > 0 -> TurnRight ab
+        otherwise   -> NoChange
+    where   ang21       = lineAngle (pointSlope p1 p2)
+            ang32       = lineAngle (pointSlope p2 p3)
+            angBetween
+                | (ang32 * ang21 /= -1) = atan ((ang32 - ang21)/(1 + (ang32 * ang21)))
+                | otherwise             = 0
+
