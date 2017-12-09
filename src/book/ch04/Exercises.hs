@@ -18,16 +18,17 @@ safeInit (x:xs) =
 safeInit []     = Nothing
 
 isEven :: Int -> Bool
-isEven x = (mod x 2) == 0
+isEven x = (x `mod` 2) == 0
 
 splitWith :: (t -> Bool) -> [t] -> [[t]]
 splitWith func xs =
   let (pre, sub) = break notFunc xs
-  in pre : case sub of
-    []    -> []
-    x:[]  -> [[x]]
+  in pre : case (pre, sub) of
+    (_, [])     -> []
+    (_, x:[])   -> [[x]]
+    ([], sub)   -> [sub]
     _     -> splitWith func sub
-  where notFunc x1 = not (func x1)
+  where notFunc = not . func
 
 first xs = case xs of
   []    -> Nothing
